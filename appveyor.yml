@@ -4,6 +4,7 @@ build:
   verbosity: minimal
 
 
+
 configuration: Release
 
 
@@ -15,7 +16,9 @@ before_build:
   - set CMAKE_PREFIX_PATH=%QTDIR%;%CMAKE_PREFIX_PATH%
   - cmake -G "Visual Studio 14 2015" .
   - cmake --build . --config Release
-  
+  - dir
+
+
 #build_script:
 #  msbuild bmc.sln /t:bmc-ui /p:Configuration=Release
 
