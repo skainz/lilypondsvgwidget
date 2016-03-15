@@ -2,7 +2,7 @@
 version: 1.0.{build}
 build:
   verbosity: minimal
-
+  project: Project.sln
 
 
 configuration: Release
@@ -20,5 +20,5 @@ before_build:
 
 
 #build_script:
-#  msbuild bmc.sln /t:bmc-ui /p:Configuration=Release
+#  - msbuild Project.sln /t:test-app /p:Configuration=Release
 
