@@ -1,0 +1,21 @@
+
+version: 1.0.{build}
+build:
+  verbosity: minimal
+  project: bmc.sln
+
+
+configuration: Release
+
+
+environment:
+  QTDIR: 'C:\Qt\5.5\msvc2013'
+
+before_build:
+  - set PATH=%PATH%:%QTDIR%
+  - cmake -G "Visual Studio 14 2015" .
+  - cmake --build . --config Release
+  
+#build_script:
+#  msbuild bmc.sln /t:bmc-ui /p:Configuration=Release
+
