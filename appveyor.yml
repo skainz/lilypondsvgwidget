@@ -2,7 +2,6 @@
 version: 1.0.{build}
 build:
   verbosity: minimal
-  project: bmc.sln
 
 
 configuration: Release
