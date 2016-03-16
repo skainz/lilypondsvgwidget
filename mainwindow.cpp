@@ -30,8 +30,8 @@
 #include "mainwindow.h"
 #include "optionsdialog.h"
 
-#include <boost/spirit/include/qi_parse.hpp>
-#include <boost/spirit/include/qi_core.hpp>
+// #include <boost/spirit/include/qi_parse.hpp>
+// #include <boost/spirit/include/qi_core.hpp>
 
 #ifdef Q_OS_MAC
 const QString rsrcPath = ":/images/mac";
