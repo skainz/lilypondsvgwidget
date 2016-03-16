@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 // bmc::braille::set_default_table_from_locale();
 
     QApplication app(argc, argv);
-    QApplication::setApplicationName("Braille Music Compiler");
+//    QApplication::setApplicationName("Braille Music Compiler");
 //    QApplication::setApplicationVersion(BMC_VERSION);
     BrailleMusicEditor window;
     window.show();
