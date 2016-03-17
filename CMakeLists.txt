@@ -12,7 +12,7 @@ find_package(Qt5 COMPONENTS Core Multimedia Svg Widgets Xml)
 if(Qt5_FOUND)
   qt5_add_resources(RESOURCES app.qrc)
   configure_file(config.h.in config.h)
-  add_executable(bmc-ui MACOSX_BUNDLE WIN32
+  add_executable(bmc-ui
     app.cpp
     mainwindow.cpp mainwindow.h
     lilypondsvgwidget.cpp lilypondsvgwidget.h
