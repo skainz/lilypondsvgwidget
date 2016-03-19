@@ -11,7 +11,14 @@ configuration: Release
 environment:
   QTDIR: 'C:\Qt\5.5\msvc2013'
 
+install:
+  - curl.exe http://www.codesynthesis.com/download/xsd/4.0/windows/i686/xsd-4.0.msi -o xsd-4.0.msi
+#  - msiexec.exe /i xsd-4.0.msi /quiet /qn /norestart /log install.log
+#  - type install.log
+
 before_build:
+#  - cd "C:\Program Files (x86)\CodeSynthesis XSD 4.0\xerces-c-3.1.1\projects\Win32\VC10\xerces-all\"
+#  - msbuild xerces-all.sln /t:XercesLib /P:Configuration="Static Release"
   - set PATH=%QTDIR%\bin;%PATH%
   - set CMAKE_PREFIX_PATH=%QTDIR%;%CMAKE_PREFIX_PATH%
   - cmake -G "Visual Studio 14 2015" .
