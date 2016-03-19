@@ -43,3 +43,21 @@ if(Qt5_FOUND)
   )
 endif()
 
+
+include(InstallRequiredSystemLibraries)
+include(CPack)
+
+set(CPACK_PACKAGE_VERSION_MAJOR 0)
+set(CPACK_PACKAGE_VERSION_MINOR 1)
+set(CPACK_PACKAGE_VERSION_PATCH 0)
+set(CPACK_PACKAGE_CONTACT "Simon Kainz <simon@familiekainz.at>")
+set(CPACK_STRIP_FILES TRUE)
+
+
+file(GLOB MY_QT5_PLATFORM_FILES ${Qt5_DIR}/../../../plugins/platforms/qwindows*.dll)
+message(${MY_QT5_PLATFORM_FILES})
+install (FILES ${MY_QT5_PLATFORM_FILES} DESTINATION bin/platforms)
+
+file(GLOB MY_QT5_EXTRADLL_FILES ${Qt5_DIR}/../../../../../Tools/QtCreator/bin/Qt5*.dll)
+message(${MY_QT5_EXTRADLL_FILES})
+install (FILES ${MY_QT5_EXTRADLL_FILES} DESTINATION bin)
