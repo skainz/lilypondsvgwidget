@@ -36,7 +36,7 @@ if(Qt5_FOUND)
   
 #  target_compile_features(bmc-ui PRIVATE cxx_range_for)
   target_link_libraries(bmc-ui
-    Qt5::Widgets Qt5::Multimedia Qt5::Svg Qt5::Xml
+    Qt5::Widgets Qt5::Multimedia Qt5::Svg Qt5::Xml	${QT5_STATIC_LIBS}											
   )
   
   # install(TARGETS bmc-ui
@@ -80,11 +80,11 @@ install(TARGETS bmc-ui
 #  message("Plugin ${plugin} is at location ${_loc}")
 #endforeach()
 
-file(GLOB MY_QT5_PLATFORM_FILES ${Qt5_DIR}/../../../plugins/platforms/qwindows*.dll)
-message(${MY_QT5_PLATFORM_FILES})
-install (FILES ${MY_QT5_PLATFORM_FILES} DESTINATION bin/platforms)
+#file(GLOB MY_QT5_PLATFORM_FILES ${Qt5_DIR}/../../../plugins/platforms/qwindows*.dll)
+#message(${MY_QT5_PLATFORM_FILES})
+#install (FILES ${MY_QT5_PLATFORM_FILES} DESTINATION bin/platforms)
 
-file(GLOB MY_QT5_EXTRADLL_FILES ${Qt5_DIR}/../../../../../Tools/QtCreator/bin/Qt5*.dll)
-message(${MY_QT5_EXTRADLL_FILES})
-install (FILES ${MY_QT5_EXTRADLL_FILES} DESTINATION bin)
+#file(GLOB MY_QT5_EXTRADLL_FILES ${Qt5_DIR}/../../../../../Tools/QtCreator/bin/Qt5*.dll)
+#message(${MY_QT5_EXTRADLL_FILES})
+#install (FILES ${MY_QT5_EXTRADLL_FILES} DESTINATION bin)
 
