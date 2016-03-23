@@ -1,6 +1,11 @@
 #include "mainwindow.h"
 #include <QApplication>
 
+#include <QtPlugin>
+
+
+Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+
 #include <locale>
 // #include <bmc/braille/text2braille.hpp>
 
