@@ -14,7 +14,7 @@ environment:
 before_build:
   - set PATH=%QTDIR%\bin;%PATH%
   - set CMAKE_PREFIX_PATH=%QTDIR%;%CMAKE_PREFIX_PATH%
-  - cmake -G "Visual Studio 14 2015" .
+  - cmake -G "Visual Studio 14 2015" -DQT5_STATIC_LIBS=C:\projects\lilypondsvgwidget\qt-5.6.0-static\lib\qtharfbuzzng.lib;C:\projects\lilypondsvgwidget\qt-5.6.0-static\lib\qtfreetype.lib;C:\projects\lilypondsvgwidget\qt-5.6.0-static\lib\qtpcre.lib;C:\projects\lilypondsvgwidget\qt-5.6.0-static\lib\Qt5PlatformSupport.lib;C:\projects\lilypondsvgwidget\qt-5.6.0-static\plugins\platforms\qminimal.lib;C:\projects\lilypondsvgwidget\qt-5.6.0-static\plugins\platforms\qoffscreen.lib;C:\projects\lilypondsvgwidget\qt-5.6.0-static\plugins\platforms\qwindows.lib;imm32.lib;winmm.lib;Ws2_32.lib;iphlpapi.lib .
 #  - cmake --build . --config Release
   - dir
 
