@@ -9,7 +9,11 @@ configuration: Release
 
 
 environment:
-  QTDIR: 'C:\Qt\5.5\msvc2013'
+  QTDIR: 'C:\projects\lilypondsvgwidget\qt-5.6.0-static'
+
+install:
+  - curl.exe -s -o qt-5.6.0-static-msvc2015_x86.zip http://familiekainz.at/libs/qt-5.6.0-static-msvc2015_x86.zip
+  - 7z x qt-5.6.0-static-msvc2015_x86.zip
 
 before_build:
   - set PATH=%QTDIR%\bin;%PATH%
